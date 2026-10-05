@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CSA STAR | Security, Trust, Assurance &amp; Risk</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&family=Montserrat:ital,wght@0,600;0,700;0,800;1,800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#fff;--mute:#cfe0ff;--accent:#8ec9ff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#031a66;color:var(--ink);font-family:Barlow,system-ui,-apple-system,sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+.hero{position:relative;min-height:540px;display:flex;align-items:center;background:radial-gradient(70% 90% at 68% 45%,#1478ff 0%,#0646c8 45%,#031a66 100%);overflow:hidden}
+.rays{position:absolute;z-index:0;left:68%;top:48%;width:220vmax;height:220vmax;transform:translate(-50%,-50%);background:repeating-conic-gradient(rgba(255,255,255,.11) 0 7.5deg,transparent 7.5deg 15deg);-webkit-mask-image:radial-gradient(circle,#000 0,transparent 55%);mask-image:radial-gradient(circle,#000 0,transparent 55%);animation:spin 160s linear infinite;pointer-events:none}
+@keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg)}}
+#particles-js{position:absolute;inset:0;z-index:1;pointer-events:auto}
+#particles-js canvas{pointer-events:auto}
+.inner{position:relative;z-index:3;width:100%;max-width:1280px;margin:0 auto;padding:4.2rem clamp(1.25rem,5vw,4rem) 2rem;display:grid;grid-template-columns:1fr 1.05fr;align-items:center;gap:1rem;pointer-events:none}
+.copy{max-width:540px}.copy>*{pointer-events:auto}
+.eyebrow{display:inline-block;font:700 .95rem 'Barlow Condensed',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:.9rem;opacity:0;animation:rise .8s .2s forwards}
+h1{font-family:Montserrat,Arial,sans-serif;font-weight:800;font-style:italic;font-size:clamp(3.2rem,7.5vw,6rem);line-height:1;margin-bottom:1.1rem;opacity:0;animation:rise .8s .35s forwards}
+h1 span{color:var(--accent)}
+.copy p{font-size:clamp(1rem,1.5vw,1.2rem);line-height:1.6;color:var(--mute);opacity:0;animation:rise .8s .5s forwards}
+.btns{display:flex;flex-wrap:wrap;gap:.8rem;opacity:0;animation:rise .8s .65s forwards}
+.btn{display:inline-block;padding:.85rem 1.6rem;border-radius:999px;font:600 1rem Barlow,sans-serif;text-decoration:none;transition:transform .2s,background .2s,color .2s}
+.btn.pri{background:#fff;color:#0a3cae}.btn.pri:hover{transform:translateY(-2px)}
+.btn.sec{border:2px solid #fff;color:#fff}.btn.sec:hover{background:#fff;color:#0a3cae}
+.btn:focus-visible{outline:3px solid #8ec9ff;outline-offset:3px}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.visual{position:relative;height:440px}
+#cv{position:absolute;inset:0;width:100%;height:100%}
+nav.crumb{position:absolute;top:1rem;left:clamp(1.25rem,5vw,4rem);z-index:4;display:flex;flex-wrap:wrap;gap:.5rem;font-size:.95rem;color:var(--mute)}
+nav.crumb a{color:inherit;text-decoration:none}nav.crumb a:hover{color:#fff}
+nav.crumb a:focus-visible{outline:2px solid #8ec9ff;outline-offset:3px}
+nav.crumb b{color:#fff;font-weight:600}
+@media(max-width:860px){.inner{grid-template-columns:1fr;padding-top:3.6rem}.visual{height:340px}.copy{max-width:none}.rays{left:50%;top:70%}}
+.ticker-track-container{position:relative;z-index:4;width:100%;height:68px;overflow:hidden;display:flex;align-items:center;background:#fff;color:#0a2a7a;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:clamp(1.1rem,2vw,1.5rem);letter-spacing:.06em}
+.ticker-track-container:hover .ticker-track,.ticker-track-container:focus-within .ticker-track{animation-play-state:paused}
+.ticker-track{display:flex;width:max-content;align-items:center;white-space:nowrap;animation:slide var(--dur,60s) linear infinite}
+@keyframes slide{to{transform:translate3d(calc(-1 * var(--dist,1000px)),0,0)}}
+.ticker-group{display:flex;align-items:center;flex-shrink:0;gap:1.6rem;padding-right:1.6rem}
+.ticker-group a{color:inherit;text-decoration:none;border-bottom:2px solid transparent;transition:color .2s,border-color .2s}
+.ticker-group a:hover{color:#1478ff;border-color:#1478ff}
+.ticker-group a:focus-visible{outline:2px solid #1478ff;outline-offset:3px}
+.ticker-group svg{width:1.2em;height:1.2em;flex-shrink:0;color:#1478ff}
+@media(prefers-reduced-motion:reduce){.rays,.ticker-track,.eyebrow,h1,.copy p,.btns{animation:none;opacity:1}.ticker-track-container{overflow-x:auto}}
+</style>
+</head>
+<body>
+<section class="hero" id="hero">
+  <div class="rays" aria-hidden="true"></div>
+  <div id="particles-js" aria-hidden="true"></div>
+  <nav class="crumb" aria-label="Breadcrumb">
+    <a href="#">Home</a><span aria-hidden="true">&gt;</span>
+    <a href="#">Standards</a><span aria-hidden="true">&gt;</span>
+    <b>CSA STAR</b>
+  </nav>
+  <div class="inner">
+    <div class="copy">
+      <span class="eyebrow">Security · Trust · Assurance &amp; Risk</span>
+      <h1>CSA <span>STAR</span></h1>
+      <p>Show customers your cloud services are secure and transparent. We guide you from the CCM gap assessment through self-assessment or third-party audit to your public STAR listing.</p>
+    </div>
+    <div class="visual" id="visual"><canvas id="cv" role="img" aria-label="CSA Level One badge with laurel wreath and shield"></canvas></div>
+  </div>
+</section>
+<div class="ticker-track-container" id="identity" aria-label="CSA STAR offerings">
+  <div class="ticker-track" id="ticker-track"></div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+<script>
+const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const rad = d => d * Math.PI / 180;
+const Particles = {
+  tier: null,
+  init() {
+    const w = innerWidth, t = w < 768 ? 'm' : w <= 1200 ? 't' : 'd';
+    if (t === this.tier) return; this.tier = t;
+    try {
+      this.pause(); window.pJSDom = []; document.getElementById('particles-js').innerHTML = '';
+      particlesJS('particles-js', {
+        particles: { number: { value: t === 'm' ? 14 : t === 't' ? 24 : 34, density: { enable: true, value_area: 900 } },
+          color: { value: ['#ffffff', '#8ec9ff', '#4aa3ff'] }, shape: { type: 'circle' }, opacity: { value: 0.5 }, size: { value: 3, random: true },
+          line_linked: { enable: w >= 480, distance: t === 'm' ? 80 : 120, color: '#ffffff', opacity: 0.25, width: 1 },
+          move: { enable: !reduced, speed: reduced ? 0 : 1.5, direction: 'none', out_mode: 'out' } },
+        interactivity: {
+          detect_on: 'canvas',
+          events: {
+            onhover: { enable: !reduced, mode: 'repulse' },
+            onclick: { enable: !reduced, mode: 'push' },
+            resize: false
+          },
+          modes: {
+            repulse: { distance: 100, duration: 0.4 },
+            push: { particles_nb: 2 }
+          }
+        },
+        retina_detect: false });
+    } catch (e) { console.warn(e); }
+  },
+  pause() { (window.pJSDom || []).forEach(d => { const f = d?.pJS?.fn; if (f?.drawAnimFrame) { (window.cancelRequestAnimFrame || cancelAnimationFrame)(f.drawAnimFrame); f.drawAnimFrame = null; } }); },
+  resume() { if (reduced) return; (window.pJSDom || []).forEach(d => { const p = d?.pJS; if (p && !p.fn.drawAnimFrame && p.particles?.move?.enable) p.fn.drawAnimFrame = (window.requestAnimFrame || requestAnimationFrame)(p.fn.vendors.draw); }); }
+};
+
+class Scene {
+  constructor(cv, box) {
+    this.cv = cv; this.ctx = cv.getContext('2d'); this.box = box;
+    this.running = false; this.visible = true; this.raf = null; this.W = 0; this.H = 0; this.fps = 30; this.last = 0; this.t0 = performance.now();
+    this.bokeh = Array.from({ length: 12 }, () => ({ a: Math.random() * 6.28, r: 1.1 + Math.random() * .8, s: (Math.random() - .5) * .1, sz: 2 + Math.random() * 4 }));
+    const x = (this.spr = document.createElement('canvas')).getContext('2d'); this.spr.width = this.spr.height = 64;
+    const g = x.createRadialGradient(32, 32, 0, 32, 32, 32); g.addColorStop(0, 'rgba(255,255,255,.9)'); g.addColorStop(1, 'rgba(255,255,255,0)');
+    x.fillStyle = g; x.beginPath(); x.arc(32, 32, 32, 0, 6.28); x.fill();
+    this.fb = this.frame.bind(this);
+  }
+  resize() {
+    const w = this.box.clientWidth, h = this.box.clientHeight;
+    if (w === this.W && h === this.H) return;
+    this.W = w; this.H = h;
+    const m = innerWidth < 768, dpr = Math.min(devicePixelRatio || 1, m ? 1.25 : 1.5); this.fps = m ? 24 : 30; this.dpr = dpr; this.cache = null;
+    this.cv.width = Math.round(w * dpr); this.cv.height = Math.round(h * dpr); this.ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    if (reduced) this.render(this.t0 + 10000);
+  }
+  arcText(txt, a0, a1, r, flip) {
+    const c = this.ctx, n = txt.length;
+    for (let i = 0; i < n; i++) {
+      const a = rad(a0 + i * (a1 - a0) / (n - 1));
+      c.save(); c.translate(Math.cos(a) * r, Math.sin(a) * r); c.rotate(a + (flip ? -Math.PI / 2 : Math.PI / 2)); c.fillText(txt[i], 0, 0); c.restore();
+    }
+  }
+  /* Star wreath: one definition, drawn mirrored (side = -1 left, +1 right) about the badge axis x=0 */
+  leaf(sw) {
+    const c = this.ctx, L = { cy: 10, r: 162, from: 196, step: 7.7, n: 8 };
+    [-1, 1].forEach(side => {
+      c.save(); c.scale(side, 1);
+      for (let i = 0; i < L.n; i++) {
+        const th = rad(L.from - i * L.step), k = i / (L.n - 1), R = 6.5 + k * 5.5;
+        c.save(); c.translate(Math.cos(th) * L.r, L.cy + Math.sin(th) * L.r);
+        c.rotate(th + Math.PI / 2 + sw * .08);
+        c.beginPath();
+        for (let q = 0; q < 10; q++) { const a = -Math.PI / 2 + q * Math.PI / 5, rr = q % 2 ? R * .45 : R; c[q ? 'lineTo' : 'moveTo'](Math.cos(a) * rr, Math.sin(a) * rr); }
+        c.closePath(); c.lineJoin = 'round'; c.lineWidth = 2; c.fillStyle = c.strokeStyle = i % 2 ? '#bac6db' : '#a3b3cd'; c.fill(); c.stroke(); c.restore();
+      }
+      c.restore();
+    });
+  }
+  shield() {
+    const c = this.ctx; c.beginPath(); c.moveTo(-67, 53); c.lineTo(67, 53); c.lineTo(92, 100); c.lineTo(92, 108);
+    c.bezierCurveTo(92, 128, 52, 142, 0, 150); c.bezierCurveTo(-52, 142, -92, 128, -92, 108); c.lineTo(-92, 100); c.closePath();
+  }
+  /* Static layer: disc, arc text, title, CSA shield. Rendered once per size, then blitted on whole device pixels. */
+  drawStatic() {
+    const c = this.ctx;
+    c.save(); c.shadowColor = 'rgba(120,200,255,.65)'; c.shadowBlur = 40;
+    c.beginPath(); c.arc(0, 0, 200, 0, 6.28); c.fillStyle = '#fff'; c.fill(); c.restore();
+    c.fillStyle = '#1f56c4'; c.font = '600 22px Montserrat, sans-serif'; c.textAlign = 'center'; c.textBaseline = 'middle';
+    this.arcText('CLOUD SECURITY ALLIANCE', -157, -23, 170, false);
+    c.fillStyle = '#1a4fa3'; c.font = '800 48px Montserrat, sans-serif'; c.textBaseline = 'alphabetic';
+    c.fillText('Level', 0, -49); c.fillText('One', 0, -3);
+    c.save(); c.translate(0, 8);
+    this.shield(); c.fillStyle = '#1b4faa'; c.fill();
+    c.save(); c.translate(0, 100); c.scale(.88, .8); c.translate(0, -100); this.shield(); c.lineWidth = 3.5; c.strokeStyle = '#fff'; c.stroke(); c.restore();
+    c.fillStyle = '#fff'; c.font = 'italic 800 52px Montserrat, sans-serif'; c.fillText('CSA', 0, 118);
+    c.restore();
+  }
+  drawBadge(cx, cy, k, e, t) {
+    const c = this.ctx, dpr = this.dpr || 1, sw = Math.round(480 * k * dpr), D = sw / dpr, kk = D / 480;
+    if (!this.cache || this.cache.width !== sw) {
+      const cv = document.createElement('canvas'); cv.width = cv.height = sw;
+      const real = this.ctx; this.ctx = cv.getContext('2d'); this.ctx.setTransform(sw / 480, 0, 0, sw / 480, sw / 2, sw / 2);
+      this.drawStatic(); this.ctx = real; this.cache = cv;
+    }
+    let px = cx, py = cy;
+    if (e >= 1) { px = Math.round((cx - D / 2) * dpr) / dpr + D / 2; py = Math.round((cy - D / 2) * dpr) / dpr + D / 2; }
+    c.drawImage(this.cache, px - D * e / 2, py - D * e / 2, D * e, D * e);
+    c.save(); c.translate(px, py); c.scale(kk * e, kk * e); this.leaf(reduced ? 0 : Math.sin(t * 1.4)); c.restore();
+  }
+  chip(x, y, r) {
+    const c = this.ctx; c.save(); c.translate(x, y); c.shadowColor = 'rgba(0,20,90,.4)'; c.shadowBlur = 14;
+    c.beginPath(); c.arc(0, 0, r, 0, 6.28); c.fillStyle = '#fff'; c.fill(); c.shadowBlur = 0;
+    c.beginPath(); for (let k = 0; k < 10; k++) { const a = -Math.PI / 2 + k * Math.PI / 5, q = k % 2 ? r * .27 : r * .6; c[k ? 'lineTo' : 'moveTo'](Math.cos(a) * q, Math.sin(a) * q); }
+    c.closePath(); c.fillStyle = '#1478ff'; c.fill(); c.restore();
+  }
+  render(now) {
+    const c = this.ctx, t = (now - this.t0) / 1000, W = this.W, H = this.H;
+    c.clearRect(0, 0, W, H);
+    const p = reduced ? 1 : Math.min(1, t / 1.2), e = 1 - Math.pow(1 - p, 3);
+    const cx = W / 2, cy = H / 2, u = Math.min(W / 540, H / 460), R = 140 * u * e, maxR = Math.min(cx, cy) - 2;
+    if (e < .03) return;
+    c.lineWidth = 1.2;
+    for (let k = 0; k < 4; k++) { const ph = reduced ? (k + .5) / 4 : ((t * .14 + k / 4) % 1); c.strokeStyle = `rgba(255,255,255,${(1 - ph) * .5})`; c.beginPath(); c.arc(cx, cy, (R * 1.1 + ph * (maxR - R * 1.1)), 0, 6.28); c.stroke(); }
+    c.setLineDash([3, 9]); c.lineDashOffset = reduced ? 0 : -t * 8;
+    [1.25, 1.45].forEach((s, i) => { c.strokeStyle = `rgba(255,255,255,${.5 - i * .15})`; c.beginPath(); c.arc(cx, cy, R * s, 0, 6.28); c.stroke(); });
+    c.setLineDash([]);
+    const bd = b => R * 1.15 + (b.r - 1.1) / .8 * Math.max(0, maxR - 16 - R * 1.15);
+    this.bokeh.forEach(b => { const a = b.a + (reduced ? 0 : t * b.s), sz = b.sz * 4.4; c.drawImage(this.spr, cx + Math.cos(a) * bd(b) - sz / 2, cy + Math.sin(a) * bd(b) - sz / 2, sz, sz); });
+    for (let k = 0; k < 3; k++) { const a = rad(-60 + k * 120) + (reduced ? 0 : t * .25), rr = R * (k === 1 ? 1.45 : 1.3); this.chip(cx + Math.cos(a) * rr, cy + Math.sin(a) * rr, (k === 1 ? 13 : 16) * u * e); }
+    this.drawBadge(cx, cy, .7 * u, e, t);
+  }
+  frame(now) { if (!this.running) return; this.raf = requestAnimationFrame(this.fb); const d = now - this.last, iv = 1000 / this.fps; if (d < iv) return; this.last = now - (d % iv); this.render(now); }
+  start() { if (reduced) { this.render(this.t0 + 10000); return; } if (this.running) return; this.running = true; this.last = performance.now(); this.raf = requestAnimationFrame(this.fb); }
+  pause() { this.running = false; if (this.raf) cancelAnimationFrame(this.raf); this.raf = null; }
+  setVisible(v) { if (this.visible === v) return; this.visible = v; v && !document.hidden ? this.start() : this.pause(); }
+}
+
+(function () {
+  const STD = ['STAR Level 1', 'STAR Level 2', 'CCM', 'CAIQ', 'Self-Assessment', 'Third-Party Audit', 'Continuous Auditing', 'Trusted Cloud Provider'];
+  const ICON = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.5 2.8 6 6.5.8-4.8 4.5 1.3 6.5L12 17l-5.8 3.3 1.3-6.5L2.7 9.3l6.5-.8z"/></svg>';
+  const seq = STD.map(n => `<a href="/csa-${n.toLowerCase().replace(/\s+/g, '-')}">${n}</a>${ICON}`).join('');
+  let lastW = 0;
+  function build(force) {
+    const box = document.getElementById('identity'), track = document.getElementById('ticker-track');
+    const w = box.clientWidth || innerWidth;
+    if (!force && Math.abs(w - lastW) < 2) return;
+    lastW = w; track.innerHTML = '';
+    const g1 = document.createElement('div'); g1.className = 'ticker-group'; g1.innerHTML = seq; track.appendChild(g1);
+    const reps = Math.max(1, Math.ceil(w * 1.15 / (g1.getBoundingClientRect().width || 1)));
+    if (reps > 1) g1.innerHTML = seq.repeat(reps);
+    const g2 = g1.cloneNode(true); g2.setAttribute('aria-hidden', 'true'); g2.querySelectorAll('a').forEach(a => a.tabIndex = -1); track.appendChild(g2);
+    const gw = g1.getBoundingClientRect().width;
+    track.style.setProperty('--dist', gw.toFixed(2) + 'px'); track.style.setProperty('--dur', (gw / 35).toFixed(2) + 's');
+  }
+  build(true);
+  const hero = document.getElementById('hero'), visual = document.getElementById('visual');
+  const scene = new Scene(document.getElementById('cv'), visual);
+  scene.resize(); scene.start(); Particles.init();
+  document.fonts?.ready.then(() => { build(true); if (reduced) scene.render(scene.t0 + 10000); });
+  let rz = null;
+  const onResize = () => { cancelAnimationFrame(rz); rz = requestAnimationFrame(() => { scene.resize(); Particles.init(); build(false); }); };
+  if (window.ResizeObserver) { const ro = new ResizeObserver(onResize); ro.observe(hero); ro.observe(visual); } else addEventListener('resize', onResize, { passive: true });
+  let lastV = null;
+  new IntersectionObserver(es => {
+    const en = es[es.length - 1], v = en.isIntersecting && en.intersectionRatio > .05;
+    if (v === lastV) return; lastV = v; scene.setVisible(v); v ? Particles.resume() : Particles.pause();
+  }, { threshold: [0, .05, .1], rootMargin: '100px' }).observe(hero);
+  document.addEventListener('visibilitychange', () => { if (document.hidden) { scene.pause(); Particles.pause(); } else if (scene.visible) { scene.start(); Particles.resume(); } });
+})();
+</script>
+</body>
+</html>
